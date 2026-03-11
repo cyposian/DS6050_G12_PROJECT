@@ -92,14 +92,14 @@ PROJ_DIR="$HOME/development"
 mkdir -p "$PROJ_DIR"
 
 # ---- Step 5a: Clone Git Repo ----
-echo ""
-echo "[5a/5] Cloning Git Repo https://github.com/d26clarke/DS6050_G12_PROJECT.git..."
-REPO_URL="https://github.com/d26clarke/DS6050_G12_PROJECT.git"
+#echo ""
+#cho "[5a/5] Cloning Git Repo https://github.com/d26clarke/DS6050_G12_PROJECT.git..."
+EPO_URL="https://github.com/d26clarke/DS6050_G12_PROJECT.git"
 TARGET_DIR="$PROJ_DIR"
 #git clone "$REPO_URL" "$TARGET_DIR" This command syntax does not Work
 
-cd $PROJ_DIR
-git clone "$REPO_URL"
+#cd $PROJ_DIR
+#git clone "$REPO_URL"
 
 # --- These directories will be part of the git repo
 PROJ_DIR="$PROJ_DIR/DS6050_G12_PROJECT"
@@ -120,7 +120,7 @@ echo "============================================"
 echo ""
 echo "Next steps:"
 echo "  cd $PROJ_DIR"
-echo "  python scripts/generate_ablation_configs.py"
+echo "  python scripts/generate_ablation_configs_per_model.py"
 echo "  sbatch slurm/run_single.slurm configs/baseline_simple_cnn.yaml"
 echo "  squeue -u \$USER"
 echo ""

@@ -1,0 +1,39 @@
+experiment:
+  name: ablation_initialization_xavier
+  seed: 42
+  description: 'Ablation: initialization=xavier (all others at default)'
+data:
+  dataset: fashion_mnist
+  data_dir: ./data
+  train_size: 50000
+  val_size: 10000
+  test_size: 10000
+  num_workers: 4
+  augmentation: none
+  normalize_mean: 0.286
+  normalize_std: 0.353
+model:
+  type: simple_cnn
+training:
+  optimizer: adamw
+  lr: 0.001
+  weight_decay: 0.01
+  momentum: 0.9
+  batch_size: 128
+  epochs: 50
+  dropout: 0.3
+  early_stopping:
+    enabled: true
+    patience: 5
+    monitor: val_loss
+    min_delta: 0.001
+  initialization: xavier
+logging:
+  results_csv: results/all_experiments.csv
+  save_model: false
+  save_curves: true
+  curves_dir: results/curves
+hardware:
+  device: auto
+  log_gpu_memory: true
+  log_flops: true

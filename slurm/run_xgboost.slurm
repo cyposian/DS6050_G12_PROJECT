@@ -33,7 +33,7 @@ echo "Config:        $CONFIG_FILE"
 echo "Start time:    $(date)"
 echo "============================================"
 
-python scripts/train.py --config "$CONFIG_FILE"
+python scripts/train_models.py --config "$CONFIG_FILE"
 
 EXIT_CODE=$?
 echo "============================================"

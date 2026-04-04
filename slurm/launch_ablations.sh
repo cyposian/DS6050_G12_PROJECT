@@ -68,9 +68,6 @@ for CONFIG in "$CONFIG_DIR"/*.yaml; do
 
     echo "  Submitted: $CONFIG_NAME -> Job $JOB_ID ($(basename $SLURM_TO_USE))"
     SUBMITTED=$((SUBMITTED + 1))
-
-    echo "Stopping after first submission for testing."         #delete later
-    break  # This exits the loop after the first job is sent    #delete later
 done
 
 echo ""

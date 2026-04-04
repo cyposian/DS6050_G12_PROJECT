@@ -4,7 +4,7 @@ experiment:
   description: Baseline mlp with default hyperparameters
 data:
   dataset: fashion_mnist
-  data_dir: ~/development/DS6050_G12_PROJECT/data
+  data_dir: ./data
   train_size: 50000
   val_size: 10000
   test_size: 10000

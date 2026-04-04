@@ -1,0 +1,105 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11115379
+Node:          udc-ba03-38
+Partition:     gpu-a40
+Start time:    Fri Apr  3 23:06:00 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A40
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: ablation_lr_00001
+Model:      simple_cnn
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/ablation_lr_00001.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A40
+[DATA] Train: 50000, Val: 10000, Test: 10000
+[DATA] Train class counts: [4926 4973 5015 5055 5026 5001 4967 5048 5021 4968]
+[DATA] Val class counts:   [1074 1027  985  945  974  999 1033  952  979 1032]
+[DATA] Trivial baseline (random): 10.0%
+[MODEL] Parameters: 207,018
+[MODEL] FLOPs: 1,293,312
+  Epoch   1/50 | Train Loss: 5.1221  Acc: 0.4983 | Val Loss: 0.9929  Acc: 0.6795
+  Epoch   2/50 | Train Loss: 1.0677  Acc: 0.6523 | Val Loss: 0.7422  Acc: 0.7414
+  Epoch   3/50 | Train Loss: 0.8578  Acc: 0.7067 | Val Loss: 0.6554  Acc: 0.7656
+  Epoch   4/50 | Train Loss: 0.7476  Acc: 0.7410 | Val Loss: 0.5890  Acc: 0.7900
+  Epoch   5/50 | Train Loss: 0.6748  Acc: 0.7628 | Val Loss: 0.5421  Acc: 0.8072
+  Epoch   6/50 | Train Loss: 0.6296  Acc: 0.7778 | Val Loss: 0.5083  Acc: 0.8175
+  Epoch   7/50 | Train Loss: 0.5842  Acc: 0.7915 | Val Loss: 0.4867  Acc: 0.8283
+  Epoch   8/50 | Train Loss: 0.5527  Acc: 0.8022 | Val Loss: 0.4608  Acc: 0.8351
+  Epoch   9/50 | Train Loss: 0.5248  Acc: 0.8129 | Val Loss: 0.4441  Acc: 0.8421
+  Epoch  10/50 | Train Loss: 0.5055  Acc: 0.8190 | Val Loss: 0.4331  Acc: 0.8480
+  Epoch  11/50 | Train Loss: 0.4777  Acc: 0.8275 | Val Loss: 0.4161  Acc: 0.8542
+  Epoch  12/50 | Train Loss: 0.4615  Acc: 0.8328 | Val Loss: 0.4070  Acc: 0.8582
+  Epoch  13/50 | Train Loss: 0.4456  Acc: 0.8388 | Val Loss: 0.4000  Acc: 0.8608
+  Epoch  14/50 | Train Loss: 0.4333  Acc: 0.8442 | Val Loss: 0.3883  Acc: 0.8625
+  Epoch  15/50 | Train Loss: 0.4212  Acc: 0.8488 | Val Loss: 0.3807  Acc: 0.8653
+  Epoch  16/50 | Train Loss: 0.4110  Acc: 0.8502 | Val Loss: 0.3786  Acc: 0.8650
+  Epoch  17/50 | Train Loss: 0.3980  Acc: 0.8536 | Val Loss: 0.3713  Acc: 0.8687
+  Epoch  18/50 | Train Loss: 0.3899  Acc: 0.8584 | Val Loss: 0.3666  Acc: 0.8706
+  Epoch  19/50 | Train Loss: 0.3815  Acc: 0.8623 | Val Loss: 0.3617  Acc: 0.8704
+  Epoch  20/50 | Train Loss: 0.3738  Acc: 0.8646 | Val Loss: 0.3561  Acc: 0.8753
+  Epoch  21/50 | Train Loss: 0.3656  Acc: 0.8650 | Val Loss: 0.3481  Acc: 0.8778
+  Epoch  22/50 | Train Loss: 0.3566  Acc: 0.8711 | Val Loss: 0.3510  Acc: 0.8758
+  Epoch  23/50 | Train Loss: 0.3504  Acc: 0.8709 | Val Loss: 0.3418  Acc: 0.8800
+  Epoch  24/50 | Train Loss: 0.3438  Acc: 0.8743 | Val Loss: 0.3387  Acc: 0.8810
+  Epoch  25/50 | Train Loss: 0.3355  Acc: 0.8774 | Val Loss: 0.3335  Acc: 0.8823
+  Epoch  26/50 | Train Loss: 0.3301  Acc: 0.8784 | Val Loss: 0.3292  Acc: 0.8807
+  Epoch  27/50 | Train Loss: 0.3263  Acc: 0.8792 | Val Loss: 0.3263  Acc: 0.8852
+  Epoch  28/50 | Train Loss: 0.3189  Acc: 0.8825 | Val Loss: 0.3273  Acc: 0.8850
+  Epoch  29/50 | Train Loss: 0.3132  Acc: 0.8850 | Val Loss: 0.3251  Acc: 0.8867
+  Epoch  30/50 | Train Loss: 0.3075  Acc: 0.8865 | Val Loss: 0.3184  Acc: 0.8859
+  Epoch  31/50 | Train Loss: 0.3075  Acc: 0.8871 | Val Loss: 0.3193  Acc: 0.8869
+  Epoch  32/50 | Train Loss: 0.3017  Acc: 0.8878 | Val Loss: 0.3166  Acc: 0.8881
+  Epoch  33/50 | Train Loss: 0.2922  Acc: 0.8916 | Val Loss: 0.3160  Acc: 0.8881
+  Epoch  34/50 | Train Loss: 0.2920  Acc: 0.8909 | Val Loss: 0.3101  Acc: 0.8889
+  Epoch  35/50 | Train Loss: 0.2849  Acc: 0.8936 | Val Loss: 0.3112  Acc: 0.8908
+  Epoch  36/50 | Train Loss: 0.2852  Acc: 0.8943 | Val Loss: 0.3084  Acc: 0.8915
+  Epoch  37/50 | Train Loss: 0.2795  Acc: 0.8970 | Val Loss: 0.3050  Acc: 0.8942
+  Epoch  38/50 | Train Loss: 0.2767  Acc: 0.8978 | Val Loss: 0.3050  Acc: 0.8931
+  Epoch  39/50 | Train Loss: 0.2719  Acc: 0.8992 | Val Loss: 0.2992  Acc: 0.8947
+  Epoch  40/50 | Train Loss: 0.2678  Acc: 0.9004 | Val Loss: 0.3006  Acc: 0.8963
+  Epoch  41/50 | Train Loss: 0.2648  Acc: 0.9007 | Val Loss: 0.3004  Acc: 0.8931
+  Epoch  42/50 | Train Loss: 0.2618  Acc: 0.9014 | Val Loss: 0.2942  Acc: 0.8965
+  Epoch  43/50 | Train Loss: 0.2576  Acc: 0.9032 | Val Loss: 0.2982  Acc: 0.8970
+  Epoch  44/50 | Train Loss: 0.2539  Acc: 0.9053 | Val Loss: 0.2951  Acc: 0.8961
+  Epoch  45/50 | Train Loss: 0.2498  Acc: 0.9065 | Val Loss: 0.2975  Acc: 0.8973
+  Epoch  46/50 | Train Loss: 0.2511  Acc: 0.9063 | Val Loss: 0.2938  Acc: 0.8975
+  Epoch  47/50 | Train Loss: 0.2429  Acc: 0.9093 | Val Loss: 0.2947  Acc: 0.8996
+  [EARLY STOP] No improvement for 5 epochs.
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.8996
+  F1 (macro):    0.8993
+  Train time:    92.5s
+  Epochs run:    47
+  GPU memory:    50.1 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8506
+    Trouser        : 0.9873
+    Pullover       : 0.8514
+    Dress          : 0.8983
+    Coat           : 0.8487 *** HARD CLASS
+    Sandal         : 0.9656
+    Shirt          : 0.7093 *** HARD CLASS
+    Sneaker        : 0.9493
+    Bag            : 0.9695
+    Ankle boot     : 0.9632
+[LOG] Result appended to results/all_experiments.csv
+[LOG] Curves saved to results/curves/ablation_lr_00001.json
+
+[DONE]
+============================================
+End time:      Fri Apr  3 23:07:45 EDT 2026
+Exit code:     0
+============================================

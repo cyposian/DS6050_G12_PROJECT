@@ -1,0 +1,46 @@
+============================================
+Job ID:        11115401
+Node:          udc-ba05-27c1
+CPUs:          8
+Config:        /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/dataeff_xgboost_50k.yaml
+Start time:    Fri Apr  3 22:41:03 EDT 2026
+============================================
+============================================================
+Experiment: dataeff_xgboost_50k
+Model:      xgboost
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/dataeff_xgboost_50k.yaml
+============================================================
+[DEVICE] cpu
+[DATA] Train: 50000, Val: 10000, Test: 10000
+[DATA] Train class counts: [4926 4973 5015 5055 5026 5001 4967 5048 5021 4968]
+[DATA] Val class counts:   [1074 1027  985  945  974  999 1033  952  979 1032]
+[DATA] Trivial baseline (random): 10.0%
+  XGBoost params: {'max_depth': 6, 'n_estimators': 100, 'learning_rate': 0.1, 'objective': 'multi:softmax', 'num_class': 10, 'n_jobs': -1, 'random_state': 42}
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.8910
+  F1 (macro):    0.8907
+  Train time:    48.8s
+  Epochs run:    100
+  GPU memory:    0.0 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8426 *** HARD CLASS
+    Trouser        : 0.9887
+    Pullover       : 0.8272 *** HARD CLASS
+    Dress          : 0.8960
+    Coat           : 0.8390 *** HARD CLASS
+    Sandal         : 0.9612
+    Shirt          : 0.6955 *** HARD CLASS
+    Sneaker        : 0.9432
+    Bag            : 0.9659
+    Ankle boot     : 0.9475
+[LOG] Result appended to results/all_experiments.csv
+
+[DONE]
+============================================
+End time:      Fri Apr  3 22:42:11 EDT 2026
+Exit code:     0
+============================================

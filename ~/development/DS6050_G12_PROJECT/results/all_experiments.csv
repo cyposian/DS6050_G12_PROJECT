@@ -1,2 +1,0 @@
-timestamp,experiment_name,model_type,optimizer,lr,batch_size,dropout,augmentation,initialization,accuracy,f1_macro,f1_per_class,train_time_sec,epochs_run,best_epoch,num_params,flops,gpu_mem_mb,device,seed,config_file,slurm_job_id
-2026-03-17T20:35:54.438479,baseline_mlp,mlp,adamw,0.001,128,0.3,none,he,0.8762,0.87582,"[0.8285, 0.9844, 0.7884, 0.887, 0.7977, 0.9545, 0.6884, 0.9222, 0.9666, 0.9405]",82.67,22,17,535818,535040,28.6,NVIDIA RTX A6000,42,baseline_mlp.yaml,10328956

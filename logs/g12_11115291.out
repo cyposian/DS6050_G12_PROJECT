@@ -1,0 +1,31 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11115291
+Node:          udc-an40-29
+Partition:     gpu-a6000
+Start time:    Fri Apr  3 22:14:17 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA RTX A6000
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: ablation_augmentation_crop_flip
+Model:      simple_cnn
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/ablation_augmentation_crop_flip.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA RTX A6000
+[DATA] Train: 50000, Val: 10000, Test: 10000
+[DATA] Train class counts: [4926 4973 5015 5055 5026 5001 4967 5048 5021 4968]
+[DATA] Val class counts:   [1074 1027  985  945  974  999 1033  952  979 1032]
+[DATA] Trivial baseline (random): 10.0%
+[MODEL] Parameters: 207,018
+[MODEL] FLOPs: 1,293,312
+  Epoch   1/50 | Train Loss: 1.9638  Acc: 0.4808 | Val Loss: 0.7541  Acc: 0.7133
+  Epoch   2/50 | Train Loss: 0.9728  Acc: 0.6418 | Val Loss: 0.6644  Acc: 0.7483
+  Epoch   3/50 | Train Loss: 0.8435  Acc: 0.6840 | Val Loss: 0.6209  Acc: 0.7659

@@ -53,12 +53,7 @@ SUBMITTED=0
 for CONFIG in "$CONFIG_DIR"/*.yaml; do
     CONFIG_NAME=$(basename "$CONFIG" .yaml)
 
-    # Route XGBoost and data-efficiency XGBoost jobs to CPU partition
-    if [[ "$CONFIG_NAME" == *"xgboost"* ]]; then
-        SLURM_TO_USE="$SCRIPT_DIR/run_xgboost.slurm"
-    else
-        SLURM_TO_USE="$SLURM_SCRIPT"
-    fi
+    SLURM_TO_USE="$SLURM_SCRIPT"
 
     # Submit with config as argument, override job name for easy tracking
     JOB_ID=$(sbatch \

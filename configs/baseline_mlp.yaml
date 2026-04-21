@@ -29,10 +29,10 @@ training:
     min_delta: 0.001
   initialization: he
 logging:
-  results_csv: ~/development/DS6050_G12_PROJECT/results/all_experiments.csv
+  results_csv: results/all_experiments.csv
   save_model: false
   save_curves: true
-  curves_dir: ~/development/DS6050_G12_PROJECT/results/curves
+  curves_dir: results/curves
 hardware:
   device: auto
   log_gpu_memory: true

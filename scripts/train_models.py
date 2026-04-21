@@ -523,16 +523,25 @@ def train_xgboost(config, train_loader, val_loader):
     """Train XGBoost on flattened pixel vectors."""
     import xgboost as xgb
 
-    # Extract numpy arrays from DataLoaders
-    def loader_to_numpy(loader):
+    # Extract data as Tensors
+    def loader_to_tensors(loader):
         X_list, y_list = [], []
         for inputs, targets in loader:
-            X_list.append(inputs.view(inputs.size(0), -1).numpy())
-            y_list.append(targets.numpy())
-        return np.vstack(X_list), np.concatenate(y_list)
+            X_list.append(inputs.view(inputs.size(0), -1))
+            y_list.append(targets)
+        return torch.vstack(X_list), torch.concat(y_list)
 
-    X_train, y_train = loader_to_numpy(train_loader)
-    X_val, y_val = loader_to_numpy(val_loader)
+    X_train, y_train = loader_to_tensors(train_loader)
+    X_val, y_val = loader_to_tensors(val_loader)
+
+    if torch.cuda.is_available():
+        X_train = X_train.cuda()
+        y_train = y_train.cuda()
+        X_val = X_val.cuda()
+        y_val = y_val.cuda()
+        dev = "cuda"
+    else:
+        dev = "cpu"
 
     # XGBoost params from config or defaults
     xgb_params = config["model"].get("xgb_params", {})
@@ -544,6 +553,10 @@ def train_xgboost(config, train_loader, val_loader):
         "num_class": 10,
         "n_jobs": -1,
         "random_state": config["experiment"]["seed"],
+
+        # GPU settings:
+        "tree_method": "hist",
+        "device": dev
     }
 
     print(f"  XGBoost params: {params}")
@@ -555,18 +568,26 @@ def train_xgboost(config, train_loader, val_loader):
 
     preds = clf.predict(X_val)
 
+    y_val_cpu = y_val.cpu().numpy()
+    preds_cpu = preds
+
+    if hasattr(preds, 'get'):
+        preds_cpu = preds.get()
+    elif hasattr(preds, 'cpu'):
+        preds_cpu = preds.cpu().numpy()
+
+
     return {
-        "accuracy": accuracy_score(y_val, preds),
-        "f1_macro": f1_score(y_val, preds, average="macro"),
-        "f1_per_class": f1_score(y_val, preds, average=None).tolist(),
-        "confusion_matrix": confusion_matrix(y_val, preds).tolist(),
+        "accuracy": accuracy_score(y_val_cpu, preds_cpu),
+        "f1_macro": f1_score(y_val_cpu, preds_cpu, average="macro"),
+        "f1_per_class": f1_score(y_val_cpu, preds_cpu, average=None).tolist(),
+        "confusion_matrix": confusion_matrix(y_val_cpu, preds_cpu).tolist(),
         "train_time_sec": round(elapsed, 2),
         "epochs_run": params["n_estimators"],
         "best_epoch": -1,
         "gpu_mem_mb": 0.0,
         "history": {},
     }
-
 
 # ============================================================
 # 8. CSV LOGGING

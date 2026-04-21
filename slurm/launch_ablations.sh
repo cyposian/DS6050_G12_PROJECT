@@ -15,6 +15,12 @@
 #   - Each job runs independently and logs to results/all_experiments.csv
 #   - You can monitor progress with: squeue -u $USER
 #
+# Monitor:
+#   squeue -u $USER              # Check queue status
+#   scancel JOB_ID               # Cancel a specific job
+#   seff JOB_ID                  # Efficiency report after completion
+#   cat logs/g12_JOBID.out       # Read stdout
+#
 # Tip: Run this once at the end of the day and let jobs run overnight.
 # ============================================================
 

@@ -4,6 +4,8 @@
 # ============================================================
 # Assumptions (You are logged onto a Rivanna terminal and are in the ${USER}/development/DS6050_G12_PROJECT directory):
 #
+# Usage:
+#   sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml
 #
 # Monitor:
 #   squeue -u $USER              # Check queue status
@@ -17,6 +19,7 @@
 #SBATCH --account=shakeri_ds6050
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:a100:1
+#SBATCH --constraint=a100_80gb
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=01:00:00

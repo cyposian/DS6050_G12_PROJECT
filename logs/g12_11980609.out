@@ -1,0 +1,55 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11980609
+Node:          udc-an36-19
+Partition:     gpu-a100-80
+Start time:    Tue Apr 21 07:00:55 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A100-SXM4-80GB
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: dataeff_xgboost_5k
+Model:      xgboost
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/dataeff_xgboost_5k.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A100-SXM4-80GB
+[DATA] Train: 5000, Val: 10000, Test: 10000
+[DATA] Train class counts: [508 493 546 465 505 514 506 495 480 488]
+[DATA] Val class counts:   [ 938  988  988 1025 1052 1031 1004 1019  967  988]
+[DATA] Trivial baseline (random): 10.0%
+  XGBoost params: {'max_depth': 6, 'n_estimators': 100, 'learning_rate': 0.1, 'objective': 'multi:softmax', 'num_class': 10, 'n_jobs': -1, 'random_state': 42, 'tree_method': 'hist', 'device': 'cuda'}
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.8540
+  F1 (macro):    0.8534
+  Train time:    2.5s
+  Epochs run:    100
+  GPU memory:    0.0 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8087 *** HARD CLASS
+    Trouser        : 0.9784
+    Pullover       : 0.7553 *** HARD CLASS
+    Dress          : 0.8848
+    Coat           : 0.7584 *** HARD CLASS
+    Sandal         : 0.9381
+    Shirt          : 0.6233 *** HARD CLASS
+    Sneaker        : 0.9080
+    Bag            : 0.9470
+    Ankle boot     : 0.9314
+[LOG] Result appended to results/all_experiments.csv
+
+[DONE]
+============================================
+End time:      Tue Apr 21 07:01:14 EDT 2026
+Exit code:     0
+============================================

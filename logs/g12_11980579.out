@@ -1,0 +1,82 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11980579
+Node:          udc-an36-31
+Partition:     gpu-a100-80
+Start time:    Tue Apr 21 02:02:36 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A100-SXM4-80GB
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: ablation_dropout_00
+Model:      simple_cnn
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/ablation_dropout_00.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A100-SXM4-80GB
+[DATA] Train: 50000, Val: 10000, Test: 10000
+[DATA] Train class counts: [4926 4973 5015 5055 5026 5001 4967 5048 5021 4968]
+[DATA] Val class counts:   [1074 1027  985  945  974  999 1033  952  979 1032]
+[DATA] Trivial baseline (random): 10.0%
+[MODEL] Parameters: 207,018
+[MODEL] FLOPs: 1,293,312
+  Epoch   1/50 | Train Loss: 1.1837  Acc: 0.7697 | Val Loss: 0.5483  Acc: 0.8145
+  Epoch   2/50 | Train Loss: 0.4590  Acc: 0.8445 | Val Loss: 0.4431  Acc: 0.8550
+  Epoch   3/50 | Train Loss: 0.3788  Acc: 0.8674 | Val Loss: 0.3722  Acc: 0.8708
+  Epoch   4/50 | Train Loss: 0.3350  Acc: 0.8803 | Val Loss: 0.3699  Acc: 0.8685
+  Epoch   5/50 | Train Loss: 0.3042  Acc: 0.8902 | Val Loss: 0.3290  Acc: 0.8816
+  Epoch   6/50 | Train Loss: 0.2888  Acc: 0.8944 | Val Loss: 0.3179  Acc: 0.8897
+  Epoch   7/50 | Train Loss: 0.2624  Acc: 0.9032 | Val Loss: 0.3076  Acc: 0.8929
+  Epoch   8/50 | Train Loss: 0.2512  Acc: 0.9079 | Val Loss: 0.3012  Acc: 0.8949
+  Epoch   9/50 | Train Loss: 0.2400  Acc: 0.9115 | Val Loss: 0.2926  Acc: 0.8979
+  Epoch  10/50 | Train Loss: 0.2269  Acc: 0.9155 | Val Loss: 0.2795  Acc: 0.9022
+  Epoch  11/50 | Train Loss: 0.2160  Acc: 0.9190 | Val Loss: 0.2848  Acc: 0.9035
+  Epoch  12/50 | Train Loss: 0.2045  Acc: 0.9237 | Val Loss: 0.2885  Acc: 0.9019
+  Epoch  13/50 | Train Loss: 0.1956  Acc: 0.9266 | Val Loss: 0.3168  Acc: 0.8946
+  Epoch  14/50 | Train Loss: 0.1879  Acc: 0.9299 | Val Loss: 0.2782  Acc: 0.9078
+  Epoch  15/50 | Train Loss: 0.1808  Acc: 0.9332 | Val Loss: 0.2627  Acc: 0.9115
+  Epoch  16/50 | Train Loss: 0.1674  Acc: 0.9379 | Val Loss: 0.2700  Acc: 0.9063
+  Epoch  17/50 | Train Loss: 0.1606  Acc: 0.9395 | Val Loss: 0.2976  Acc: 0.9002
+  Epoch  18/50 | Train Loss: 0.1543  Acc: 0.9429 | Val Loss: 0.2638  Acc: 0.9110
+  Epoch  19/50 | Train Loss: 0.1472  Acc: 0.9455 | Val Loss: 0.2574  Acc: 0.9160
+  Epoch  20/50 | Train Loss: 0.1409  Acc: 0.9477 | Val Loss: 0.2698  Acc: 0.9156
+  Epoch  21/50 | Train Loss: 0.1311  Acc: 0.9519 | Val Loss: 0.2607  Acc: 0.9135
+  Epoch  22/50 | Train Loss: 0.1246  Acc: 0.9540 | Val Loss: 0.2738  Acc: 0.9085
+  Epoch  23/50 | Train Loss: 0.1174  Acc: 0.9567 | Val Loss: 0.2646  Acc: 0.9122
+  Epoch  24/50 | Train Loss: 0.1166  Acc: 0.9571 | Val Loss: 0.2810  Acc: 0.9114
+  [EARLY STOP] No improvement for 5 epochs.
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.9114
+  F1 (macro):    0.9121
+  Train time:    93.3s
+  Epochs run:    24
+  GPU memory:    50.1 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8490 *** HARD CLASS
+    Trouser        : 0.9828
+    Pullover       : 0.8616
+    Dress          : 0.8938
+    Coat           : 0.8774
+    Sandal         : 0.9765
+    Shirt          : 0.7757 *** HARD CLASS
+    Sneaker        : 0.9565
+    Bag            : 0.9797
+    Ankle boot     : 0.9682
+[LOG] Result appended to results/all_experiments.csv
+[LOG] Curves saved to results/curves/ablation_dropout_00.json
+
+[DONE]
+============================================
+End time:      Tue Apr 21 02:04:27 EDT 2026
+Exit code:     0
+============================================

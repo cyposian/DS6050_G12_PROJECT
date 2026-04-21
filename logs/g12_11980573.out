@@ -1,0 +1,96 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11980573
+Node:          udc-an36-31
+Partition:     gpu-a100-80
+Start time:    Tue Apr 21 01:35:18 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A100-SXM4-80GB
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: ablation_augmentation_hflip
+Model:      simple_cnn
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/ablation_augmentation_hflip.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A100-SXM4-80GB
+[DATA] Train: 50000, Val: 10000, Test: 10000
+[DATA] Train class counts: [4926 4973 5015 5055 5026 5001 4967 5048 5021 4968]
+[DATA] Val class counts:   [1074 1027  985  945  974  999 1033  952  979 1032]
+[DATA] Trivial baseline (random): 10.0%
+[MODEL] Parameters: 207,018
+[MODEL] FLOPs: 1,293,312
+  Epoch   1/50 | Train Loss: 1.4417  Acc: 0.6715 | Val Loss: 0.5469  Acc: 0.8020
+  Epoch   2/50 | Train Loss: 0.6191  Acc: 0.7790 | Val Loss: 0.4693  Acc: 0.8292
+  Epoch   3/50 | Train Loss: 0.5286  Acc: 0.8105 | Val Loss: 0.4248  Acc: 0.8477
+  Epoch   4/50 | Train Loss: 0.4831  Acc: 0.8242 | Val Loss: 0.4056  Acc: 0.8493
+  Epoch   5/50 | Train Loss: 0.4454  Acc: 0.8385 | Val Loss: 0.3647  Acc: 0.8677
+  Epoch   6/50 | Train Loss: 0.4195  Acc: 0.8481 | Val Loss: 0.3510  Acc: 0.8711
+  Epoch   7/50 | Train Loss: 0.3978  Acc: 0.8559 | Val Loss: 0.3379  Acc: 0.8816
+  Epoch   8/50 | Train Loss: 0.3894  Acc: 0.8587 | Val Loss: 0.3247  Acc: 0.8794
+  Epoch   9/50 | Train Loss: 0.3694  Acc: 0.8644 | Val Loss: 0.3158  Acc: 0.8835
+  Epoch  10/50 | Train Loss: 0.3538  Acc: 0.8681 | Val Loss: 0.3072  Acc: 0.8890
+  Epoch  11/50 | Train Loss: 0.3453  Acc: 0.8726 | Val Loss: 0.2964  Acc: 0.8921
+  Epoch  12/50 | Train Loss: 0.3266  Acc: 0.8788 | Val Loss: 0.2876  Acc: 0.8952
+  Epoch  13/50 | Train Loss: 0.3184  Acc: 0.8824 | Val Loss: 0.2875  Acc: 0.8954
+  Epoch  14/50 | Train Loss: 0.3093  Acc: 0.8853 | Val Loss: 0.2792  Acc: 0.8979
+  Epoch  15/50 | Train Loss: 0.3025  Acc: 0.8900 | Val Loss: 0.2697  Acc: 0.9019
+  Epoch  16/50 | Train Loss: 0.2958  Acc: 0.8902 | Val Loss: 0.2692  Acc: 0.9004
+  Epoch  17/50 | Train Loss: 0.2875  Acc: 0.8923 | Val Loss: 0.2546  Acc: 0.9064
+  Epoch  18/50 | Train Loss: 0.2818  Acc: 0.8955 | Val Loss: 0.2606  Acc: 0.9041
+  Epoch  19/50 | Train Loss: 0.2754  Acc: 0.8973 | Val Loss: 0.2616  Acc: 0.9071
+  Epoch  20/50 | Train Loss: 0.2710  Acc: 0.8989 | Val Loss: 0.2544  Acc: 0.9060
+  Epoch  21/50 | Train Loss: 0.2648  Acc: 0.9001 | Val Loss: 0.2495  Acc: 0.9106
+  Epoch  22/50 | Train Loss: 0.2572  Acc: 0.9039 | Val Loss: 0.2553  Acc: 0.9052
+  Epoch  23/50 | Train Loss: 0.2505  Acc: 0.9064 | Val Loss: 0.2434  Acc: 0.9127
+  Epoch  24/50 | Train Loss: 0.2460  Acc: 0.9070 | Val Loss: 0.2385  Acc: 0.9125
+  Epoch  25/50 | Train Loss: 0.2421  Acc: 0.9102 | Val Loss: 0.2342  Acc: 0.9155
+  Epoch  26/50 | Train Loss: 0.2343  Acc: 0.9128 | Val Loss: 0.2426  Acc: 0.9120
+  Epoch  27/50 | Train Loss: 0.2325  Acc: 0.9139 | Val Loss: 0.2351  Acc: 0.9166
+  Epoch  28/50 | Train Loss: 0.2296  Acc: 0.9144 | Val Loss: 0.2306  Acc: 0.9162
+  Epoch  29/50 | Train Loss: 0.2243  Acc: 0.9171 | Val Loss: 0.2362  Acc: 0.9141
+  Epoch  30/50 | Train Loss: 0.2193  Acc: 0.9170 | Val Loss: 0.2448  Acc: 0.9105
+  Epoch  31/50 | Train Loss: 0.2179  Acc: 0.9189 | Val Loss: 0.2379  Acc: 0.9155
+  Epoch  32/50 | Train Loss: 0.2155  Acc: 0.9188 | Val Loss: 0.2314  Acc: 0.9163
+  Epoch  33/50 | Train Loss: 0.2122  Acc: 0.9203 | Val Loss: 0.2280  Acc: 0.9188
+  Epoch  34/50 | Train Loss: 0.2105  Acc: 0.9211 | Val Loss: 0.2293  Acc: 0.9165
+  Epoch  35/50 | Train Loss: 0.2030  Acc: 0.9244 | Val Loss: 0.2349  Acc: 0.9178
+  Epoch  36/50 | Train Loss: 0.2004  Acc: 0.9248 | Val Loss: 0.2297  Acc: 0.9208
+  Epoch  37/50 | Train Loss: 0.2012  Acc: 0.9247 | Val Loss: 0.2329  Acc: 0.9186
+  Epoch  38/50 | Train Loss: 0.1971  Acc: 0.9262 | Val Loss: 0.2346  Acc: 0.9176
+  [EARLY STOP] No improvement for 5 epochs.
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.9176
+  F1 (macro):    0.9185
+  Train time:    160.7s
+  Epochs run:    38
+  GPU memory:    50.1 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8669
+    Trouser        : 0.9902
+    Pullover       : 0.8741
+    Dress          : 0.9087
+    Coat           : 0.8849
+    Sandal         : 0.9770
+    Shirt          : 0.7841 *** HARD CLASS
+    Sneaker        : 0.9549
+    Bag            : 0.9840
+    Ankle boot     : 0.9600
+[LOG] Result appended to results/all_experiments.csv
+[LOG] Curves saved to results/curves/ablation_augmentation_hflip.json
+
+[DONE]
+============================================
+End time:      Tue Apr 21 01:38:16 EDT 2026
+Exit code:     0
+============================================

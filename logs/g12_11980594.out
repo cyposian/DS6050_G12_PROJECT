@@ -1,0 +1,75 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11980594
+Node:          udc-an36-31
+Partition:     gpu-a100-80
+Start time:    Tue Apr 21 02:33:54 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A100-SXM4-80GB
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: baseline_deeper_cnn
+Model:      deeper_cnn
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/baseline_deeper_cnn.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A100-SXM4-80GB
+[DATA] Train: 50000, Val: 10000, Test: 10000
+[DATA] Train class counts: [4926 4973 5015 5055 5026 5001 4967 5048 5021 4968]
+[DATA] Val class counts:   [1074 1027  985  945  974  999 1033  952  979 1032]
+[DATA] Trivial baseline (random): 10.0%
+[MODEL] Parameters: 299,114
+[MODEL] FLOPs: 30,313,984
+  Epoch   1/50 | Train Loss: 0.6100  Acc: 0.7974 | Val Loss: 0.4011  Acc: 0.8540
+  Epoch   2/50 | Train Loss: 0.3402  Acc: 0.8776 | Val Loss: 0.3051  Acc: 0.8892
+  Epoch   3/50 | Train Loss: 0.2803  Acc: 0.8993 | Val Loss: 0.4459  Acc: 0.8554
+  Epoch   4/50 | Train Loss: 0.2453  Acc: 0.9117 | Val Loss: 0.2930  Acc: 0.8966
+  Epoch   5/50 | Train Loss: 0.2216  Acc: 0.9211 | Val Loss: 0.2556  Acc: 0.9078
+  Epoch   6/50 | Train Loss: 0.2019  Acc: 0.9262 | Val Loss: 0.2218  Acc: 0.9195
+  Epoch   7/50 | Train Loss: 0.1814  Acc: 0.9348 | Val Loss: 0.2232  Acc: 0.9173
+  Epoch   8/50 | Train Loss: 0.1676  Acc: 0.9404 | Val Loss: 0.2304  Acc: 0.9179
+  Epoch   9/50 | Train Loss: 0.1543  Acc: 0.9434 | Val Loss: 0.2305  Acc: 0.9194
+  Epoch  10/50 | Train Loss: 0.1410  Acc: 0.9478 | Val Loss: 0.2166  Acc: 0.9250
+  Epoch  11/50 | Train Loss: 0.1300  Acc: 0.9528 | Val Loss: 0.2328  Acc: 0.9224
+  Epoch  12/50 | Train Loss: 0.1154  Acc: 0.9591 | Val Loss: 0.2119  Acc: 0.9293
+  Epoch  13/50 | Train Loss: 0.1027  Acc: 0.9625 | Val Loss: 0.2282  Acc: 0.9198
+  Epoch  14/50 | Train Loss: 0.0936  Acc: 0.9656 | Val Loss: 0.2701  Acc: 0.9153
+  Epoch  15/50 | Train Loss: 0.0865  Acc: 0.9692 | Val Loss: 0.2236  Acc: 0.9307
+  Epoch  16/50 | Train Loss: 0.0797  Acc: 0.9710 | Val Loss: 0.3694  Acc: 0.9050
+  Epoch  17/50 | Train Loss: 0.0668  Acc: 0.9761 | Val Loss: 0.2423  Acc: 0.9278
+  [EARLY STOP] No improvement for 5 epochs.
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.9278
+  F1 (macro):    0.9283
+  Train time:    74.8s
+  Epochs run:    17
+  GPU memory:    163.7 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8769
+    Trouser        : 0.9893
+    Pullover       : 0.8934
+    Dress          : 0.9224
+    Coat           : 0.9001
+    Sandal         : 0.9833
+    Shirt          : 0.7973 *** HARD CLASS
+    Sneaker        : 0.9642
+    Bag            : 0.9903
+    Ankle boot     : 0.9654
+[LOG] Result appended to results/all_experiments.csv
+[LOG] Curves saved to results/curves/baseline_deeper_cnn.json
+
+[DONE]
+============================================
+End time:      Tue Apr 21 02:35:26 EDT 2026
+Exit code:     0
+============================================

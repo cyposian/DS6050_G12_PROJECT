@@ -1,0 +1,86 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11980580
+Node:          udc-an36-31
+Partition:     gpu-a100-80
+Start time:    Tue Apr 21 02:04:55 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A100-SXM4-80GB
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: ablation_dropout_025
+Model:      simple_cnn
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/ablation_dropout_025.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A100-SXM4-80GB
+[DATA] Train: 50000, Val: 10000, Test: 10000
+[DATA] Train class counts: [4926 4973 5015 5055 5026 5001 4967 5048 5021 4968]
+[DATA] Val class counts:   [1074 1027  985  945  974  999 1033  952  979 1032]
+[DATA] Trivial baseline (random): 10.0%
+[MODEL] Parameters: 207,018
+[MODEL] FLOPs: 1,293,312
+  Epoch   1/50 | Train Loss: 1.2779  Acc: 0.7092 | Val Loss: 0.5186  Acc: 0.8162
+  Epoch   2/50 | Train Loss: 0.5466  Acc: 0.8031 | Val Loss: 0.4387  Acc: 0.8450
+  Epoch   3/50 | Train Loss: 0.4634  Acc: 0.8312 | Val Loss: 0.4166  Acc: 0.8585
+  Epoch   4/50 | Train Loss: 0.4178  Acc: 0.8471 | Val Loss: 0.3814  Acc: 0.8684
+  Epoch   5/50 | Train Loss: 0.3884  Acc: 0.8570 | Val Loss: 0.3620  Acc: 0.8691
+  Epoch   6/50 | Train Loss: 0.3582  Acc: 0.8678 | Val Loss: 0.3325  Acc: 0.8836
+  Epoch   7/50 | Train Loss: 0.3347  Acc: 0.8760 | Val Loss: 0.3229  Acc: 0.8865
+  Epoch   8/50 | Train Loss: 0.3253  Acc: 0.8802 | Val Loss: 0.3045  Acc: 0.8963
+  Epoch   9/50 | Train Loss: 0.3064  Acc: 0.8878 | Val Loss: 0.2955  Acc: 0.8933
+  Epoch  10/50 | Train Loss: 0.2988  Acc: 0.8891 | Val Loss: 0.2935  Acc: 0.8992
+  Epoch  11/50 | Train Loss: 0.2845  Acc: 0.8936 | Val Loss: 0.2882  Acc: 0.9029
+  Epoch  12/50 | Train Loss: 0.2736  Acc: 0.8986 | Val Loss: 0.2684  Acc: 0.9045
+  Epoch  13/50 | Train Loss: 0.2607  Acc: 0.9023 | Val Loss: 0.2842  Acc: 0.9017
+  Epoch  14/50 | Train Loss: 0.2556  Acc: 0.9047 | Val Loss: 0.2632  Acc: 0.9066
+  Epoch  15/50 | Train Loss: 0.2483  Acc: 0.9048 | Val Loss: 0.2672  Acc: 0.9093
+  Epoch  16/50 | Train Loss: 0.2384  Acc: 0.9102 | Val Loss: 0.2571  Acc: 0.9086
+  Epoch  17/50 | Train Loss: 0.2302  Acc: 0.9135 | Val Loss: 0.2586  Acc: 0.9064
+  Epoch  18/50 | Train Loss: 0.2239  Acc: 0.9146 | Val Loss: 0.2549  Acc: 0.9134
+  Epoch  19/50 | Train Loss: 0.2141  Acc: 0.9192 | Val Loss: 0.2575  Acc: 0.9109
+  Epoch  20/50 | Train Loss: 0.2104  Acc: 0.9189 | Val Loss: 0.2562  Acc: 0.9107
+  Epoch  21/50 | Train Loss: 0.2042  Acc: 0.9228 | Val Loss: 0.2518  Acc: 0.9120
+  Epoch  22/50 | Train Loss: 0.1953  Acc: 0.9262 | Val Loss: 0.2639  Acc: 0.9116
+  Epoch  23/50 | Train Loss: 0.1916  Acc: 0.9271 | Val Loss: 0.2424  Acc: 0.9151
+  Epoch  24/50 | Train Loss: 0.1835  Acc: 0.9306 | Val Loss: 0.2488  Acc: 0.9152
+  Epoch  25/50 | Train Loss: 0.1796  Acc: 0.9316 | Val Loss: 0.2436  Acc: 0.9143
+  Epoch  26/50 | Train Loss: 0.1734  Acc: 0.9342 | Val Loss: 0.2518  Acc: 0.9134
+  Epoch  27/50 | Train Loss: 0.1672  Acc: 0.9354 | Val Loss: 0.2644  Acc: 0.9133
+  Epoch  28/50 | Train Loss: 0.1656  Acc: 0.9374 | Val Loss: 0.2681  Acc: 0.9117
+  [EARLY STOP] No improvement for 5 epochs.
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.9117
+  F1 (macro):    0.9114
+  Train time:    107.8s
+  Epochs run:    28
+  GPU memory:    50.1 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8631
+    Trouser        : 0.9826
+    Pullover       : 0.8620
+    Dress          : 0.9086
+    Coat           : 0.8742
+    Sandal         : 0.9794
+    Shirt          : 0.7388 *** HARD CLASS
+    Sneaker        : 0.9581
+    Bag            : 0.9795
+    Ankle boot     : 0.9681
+[LOG] Result appended to results/all_experiments.csv
+[LOG] Curves saved to results/curves/ablation_dropout_025.json
+
+[DONE]
+============================================
+End time:      Tue Apr 21 02:06:59 EDT 2026
+Exit code:     0
+============================================

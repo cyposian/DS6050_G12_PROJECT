@@ -1,0 +1,86 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11980598
+Node:          udc-an36-31
+Partition:     gpu-a100-80
+Start time:    Tue Apr 21 02:41:20 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A100-SXM4-80GB
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: dataeff_mlp_10k
+Model:      mlp
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/dataeff_mlp_10k.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A100-SXM4-80GB
+[DATA] Train: 10000, Val: 10000, Test: 10000
+[DATA] Train class counts: [ 980  979 1061  974 1046 1055  984  993  957  971]
+[DATA] Val class counts:   [ 984 1024  978 1004  990  975 1031 1034  976 1004]
+[DATA] Trivial baseline (random): 10.0%
+[MODEL] Parameters: 535,818
+[MODEL] FLOPs: 535,040
+  Epoch   1/50 | Train Loss: 3.0915  Acc: 0.6380 | Val Loss: 0.6867  Acc: 0.7910
+  Epoch   2/50 | Train Loss: 0.9962  Acc: 0.7223 | Val Loss: 0.5540  Acc: 0.8115
+  Epoch   3/50 | Train Loss: 0.7872  Acc: 0.7559 | Val Loss: 0.5091  Acc: 0.8228
+  Epoch   4/50 | Train Loss: 0.6725  Acc: 0.7761 | Val Loss: 0.4957  Acc: 0.8253
+  Epoch   5/50 | Train Loss: 0.5979  Acc: 0.7968 | Val Loss: 0.4514  Acc: 0.8418
+  Epoch   6/50 | Train Loss: 0.5604  Acc: 0.8084 | Val Loss: 0.4389  Acc: 0.8421
+  Epoch   7/50 | Train Loss: 0.5116  Acc: 0.8190 | Val Loss: 0.4360  Acc: 0.8480
+  Epoch   8/50 | Train Loss: 0.5063  Acc: 0.8226 | Val Loss: 0.4385  Acc: 0.8480
+  Epoch   9/50 | Train Loss: 0.4705  Acc: 0.8347 | Val Loss: 0.4234  Acc: 0.8535
+  Epoch  10/50 | Train Loss: 0.4427  Acc: 0.8360 | Val Loss: 0.4289  Acc: 0.8491
+  Epoch  11/50 | Train Loss: 0.4381  Acc: 0.8422 | Val Loss: 0.4121  Acc: 0.8522
+  Epoch  12/50 | Train Loss: 0.4215  Acc: 0.8479 | Val Loss: 0.4167  Acc: 0.8516
+  Epoch  13/50 | Train Loss: 0.3952  Acc: 0.8550 | Val Loss: 0.4102  Acc: 0.8601
+  Epoch  14/50 | Train Loss: 0.3791  Acc: 0.8632 | Val Loss: 0.4021  Acc: 0.8566
+  Epoch  15/50 | Train Loss: 0.3736  Acc: 0.8621 | Val Loss: 0.3983  Acc: 0.8604
+  Epoch  16/50 | Train Loss: 0.3709  Acc: 0.8608 | Val Loss: 0.4016  Acc: 0.8636
+  Epoch  17/50 | Train Loss: 0.3746  Acc: 0.8644 | Val Loss: 0.4071  Acc: 0.8574
+  Epoch  18/50 | Train Loss: 0.3442  Acc: 0.8711 | Val Loss: 0.4047  Acc: 0.8626
+  Epoch  19/50 | Train Loss: 0.3329  Acc: 0.8777 | Val Loss: 0.3954  Acc: 0.8614
+  Epoch  20/50 | Train Loss: 0.3417  Acc: 0.8726 | Val Loss: 0.4271  Acc: 0.8558
+  Epoch  21/50 | Train Loss: 0.3314  Acc: 0.8773 | Val Loss: 0.4083  Acc: 0.8638
+  Epoch  22/50 | Train Loss: 0.3208  Acc: 0.8792 | Val Loss: 0.4048  Acc: 0.8600
+  Epoch  23/50 | Train Loss: 0.3272  Acc: 0.8776 | Val Loss: 0.3859  Acc: 0.8676
+  Epoch  24/50 | Train Loss: 0.3164  Acc: 0.8843 | Val Loss: 0.4080  Acc: 0.8644
+  Epoch  25/50 | Train Loss: 0.2964  Acc: 0.8866 | Val Loss: 0.4039  Acc: 0.8595
+  Epoch  26/50 | Train Loss: 0.2860  Acc: 0.8936 | Val Loss: 0.3876  Acc: 0.8686
+  Epoch  27/50 | Train Loss: 0.2706  Acc: 0.8968 | Val Loss: 0.4247  Acc: 0.8577
+  Epoch  28/50 | Train Loss: 0.2765  Acc: 0.8946 | Val Loss: 0.4214  Acc: 0.8618
+  [EARLY STOP] No improvement for 5 epochs.
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.8618
+  F1 (macro):    0.8617
+  Train time:    38.5s
+  Epochs run:    28
+  GPU memory:    28.6 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8006 *** HARD CLASS
+    Trouser        : 0.9772
+    Pullover       : 0.7617 *** HARD CLASS
+    Dress          : 0.8727
+    Coat           : 0.7723 *** HARD CLASS
+    Sandal         : 0.9397
+    Shirt          : 0.6788 *** HARD CLASS
+    Sneaker        : 0.9203
+    Bag            : 0.9624
+    Ankle boot     : 0.9317
+[LOG] Result appended to results/all_experiments.csv
+[LOG] Curves saved to results/curves/dataeff_mlp_10k.json
+
+[DONE]
+============================================
+End time:      Tue Apr 21 02:42:15 EDT 2026
+Exit code:     0
+============================================

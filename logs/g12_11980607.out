@@ -1,0 +1,55 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11980607
+Node:          udc-an36-19
+Partition:     gpu-a100-80
+Start time:    Tue Apr 21 06:58:53 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A100-SXM4-80GB
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: dataeff_xgboost_1k
+Model:      xgboost
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/dataeff_xgboost_1k.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A100-SXM4-80GB
+[DATA] Train: 1000, Val: 10000, Test: 10000
+[DATA] Train class counts: [109  99  95  98 112 102 113  96  83  93]
+[DATA] Val class counts:   [ 952  974 1065  973 1031 1061  983  997  971  993]
+[DATA] Trivial baseline (random): 10.0%
+  XGBoost params: {'max_depth': 6, 'n_estimators': 100, 'learning_rate': 0.1, 'objective': 'multi:softmax', 'num_class': 10, 'n_jobs': -1, 'random_state': 42, 'tree_method': 'hist', 'device': 'cuda'}
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.8113
+  F1 (macro):    0.8120
+  Train time:    1.7s
+  Epochs run:    100
+  GPU memory:    0.0 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.7689 *** HARD CLASS
+    Trouser        : 0.9563
+    Pullover       : 0.7063 *** HARD CLASS
+    Dress          : 0.8271 *** HARD CLASS
+    Coat           : 0.7180 *** HARD CLASS
+    Sandal         : 0.8967
+    Shirt          : 0.5496 *** HARD CLASS
+    Sneaker        : 0.8727
+    Bag            : 0.9215
+    Ankle boot     : 0.9025
+[LOG] Result appended to results/all_experiments.csv
+
+[DONE]
+============================================
+End time:      Tue Apr 21 06:59:11 EDT 2026
+Exit code:     0
+============================================

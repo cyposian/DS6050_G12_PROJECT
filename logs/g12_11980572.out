@@ -1,0 +1,107 @@
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        11980572
+Node:          udc-an36-31
+Partition:     gpu-a100-80
+Start time:    Tue Apr 21 01:30:46 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA A100-SXM4-80GB
+CUDA version:  13.0
+============================================
+============================================================
+Experiment: ablation_augmentation_crop_flip
+Model:      simple_cnn
+Config:     /home/gvc8fr/ds6050/DS6050_G12_PROJECT/configs/ablation_augmentation_crop_flip.yaml
+============================================================
+[DEVICE] cuda
+[DEVICE] GPU: NVIDIA A100-SXM4-80GB
+[DATA] Train: 50000, Val: 10000, Test: 10000
+[DATA] Train class counts: [4926 4973 5015 5055 5026 5001 4967 5048 5021 4968]
+[DATA] Val class counts:   [1074 1027  985  945  974  999 1033  952  979 1032]
+[DATA] Trivial baseline (random): 10.0%
+[MODEL] Parameters: 207,018
+[MODEL] FLOPs: 1,293,312
+  Epoch   1/50 | Train Loss: 1.9682  Acc: 0.4790 | Val Loss: 0.7643  Acc: 0.7126
+  Epoch   2/50 | Train Loss: 0.9813  Acc: 0.6385 | Val Loss: 0.6518  Acc: 0.7545
+  Epoch   3/50 | Train Loss: 0.8454  Acc: 0.6814 | Val Loss: 0.6176  Acc: 0.7636
+  Epoch   4/50 | Train Loss: 0.7749  Acc: 0.7085 | Val Loss: 0.5826  Acc: 0.7824
+  Epoch   5/50 | Train Loss: 0.7323  Acc: 0.7217 | Val Loss: 0.5471  Acc: 0.7958
+  Epoch   6/50 | Train Loss: 0.6941  Acc: 0.7381 | Val Loss: 0.5271  Acc: 0.7978
+  Epoch   7/50 | Train Loss: 0.6633  Acc: 0.7498 | Val Loss: 0.4992  Acc: 0.8007
+  Epoch   8/50 | Train Loss: 0.6353  Acc: 0.7587 | Val Loss: 0.4762  Acc: 0.8171
+  Epoch   9/50 | Train Loss: 0.6154  Acc: 0.7673 | Val Loss: 0.4707  Acc: 0.8307
+  Epoch  10/50 | Train Loss: 0.5954  Acc: 0.7762 | Val Loss: 0.4532  Acc: 0.8286
+  Epoch  11/50 | Train Loss: 0.5811  Acc: 0.7825 | Val Loss: 0.4297  Acc: 0.8401
+  Epoch  12/50 | Train Loss: 0.5639  Acc: 0.7897 | Val Loss: 0.4288  Acc: 0.8423
+  Epoch  13/50 | Train Loss: 0.5434  Acc: 0.7973 | Val Loss: 0.4125  Acc: 0.8466
+  Epoch  14/50 | Train Loss: 0.5325  Acc: 0.8025 | Val Loss: 0.4106  Acc: 0.8483
+  Epoch  15/50 | Train Loss: 0.5220  Acc: 0.8064 | Val Loss: 0.3850  Acc: 0.8587
+  Epoch  16/50 | Train Loss: 0.5034  Acc: 0.8136 | Val Loss: 0.3720  Acc: 0.8606
+  Epoch  17/50 | Train Loss: 0.4970  Acc: 0.8179 | Val Loss: 0.3692  Acc: 0.8602
+  Epoch  18/50 | Train Loss: 0.4812  Acc: 0.8239 | Val Loss: 0.3647  Acc: 0.8661
+  Epoch  19/50 | Train Loss: 0.4792  Acc: 0.8231 | Val Loss: 0.3644  Acc: 0.8644
+  Epoch  20/50 | Train Loss: 0.4672  Acc: 0.8281 | Val Loss: 0.3519  Acc: 0.8705
+  Epoch  21/50 | Train Loss: 0.4568  Acc: 0.8322 | Val Loss: 0.3409  Acc: 0.8751
+  Epoch  22/50 | Train Loss: 0.4493  Acc: 0.8354 | Val Loss: 0.3485  Acc: 0.8723
+  Epoch  23/50 | Train Loss: 0.4431  Acc: 0.8373 | Val Loss: 0.3286  Acc: 0.8781
+  Epoch  24/50 | Train Loss: 0.4357  Acc: 0.8400 | Val Loss: 0.3242  Acc: 0.8810
+  Epoch  25/50 | Train Loss: 0.4312  Acc: 0.8427 | Val Loss: 0.3182  Acc: 0.8830
+  Epoch  26/50 | Train Loss: 0.4212  Acc: 0.8461 | Val Loss: 0.3165  Acc: 0.8834
+  Epoch  27/50 | Train Loss: 0.4152  Acc: 0.8487 | Val Loss: 0.3131  Acc: 0.8837
+  Epoch  28/50 | Train Loss: 0.4071  Acc: 0.8505 | Val Loss: 0.3194  Acc: 0.8796
+  Epoch  29/50 | Train Loss: 0.4040  Acc: 0.8519 | Val Loss: 0.3016  Acc: 0.8891
+  Epoch  30/50 | Train Loss: 0.4007  Acc: 0.8539 | Val Loss: 0.3007  Acc: 0.8861
+  Epoch  31/50 | Train Loss: 0.3967  Acc: 0.8557 | Val Loss: 0.2926  Acc: 0.8917
+  Epoch  32/50 | Train Loss: 0.3896  Acc: 0.8559 | Val Loss: 0.3023  Acc: 0.8892
+  Epoch  33/50 | Train Loss: 0.3869  Acc: 0.8576 | Val Loss: 0.2862  Acc: 0.8926
+  Epoch  34/50 | Train Loss: 0.3819  Acc: 0.8617 | Val Loss: 0.2981  Acc: 0.8904
+  Epoch  35/50 | Train Loss: 0.3767  Acc: 0.8623 | Val Loss: 0.2862  Acc: 0.8945
+  Epoch  36/50 | Train Loss: 0.3723  Acc: 0.8644 | Val Loss: 0.2867  Acc: 0.8971
+  Epoch  37/50 | Train Loss: 0.3722  Acc: 0.8637 | Val Loss: 0.2902  Acc: 0.8938
+  Epoch  38/50 | Train Loss: 0.3667  Acc: 0.8661 | Val Loss: 0.2852  Acc: 0.8953
+  Epoch  39/50 | Train Loss: 0.3680  Acc: 0.8659 | Val Loss: 0.2839  Acc: 0.8940
+  Epoch  40/50 | Train Loss: 0.3641  Acc: 0.8668 | Val Loss: 0.2870  Acc: 0.8944
+  Epoch  41/50 | Train Loss: 0.3609  Acc: 0.8691 | Val Loss: 0.2681  Acc: 0.9016
+  Epoch  42/50 | Train Loss: 0.3575  Acc: 0.8693 | Val Loss: 0.2695  Acc: 0.9018
+  Epoch  43/50 | Train Loss: 0.3549  Acc: 0.8703 | Val Loss: 0.2806  Acc: 0.8998
+  Epoch  44/50 | Train Loss: 0.3491  Acc: 0.8724 | Val Loss: 0.2752  Acc: 0.8997
+  Epoch  45/50 | Train Loss: 0.3462  Acc: 0.8747 | Val Loss: 0.2839  Acc: 0.8962
+  Epoch  46/50 | Train Loss: 0.3475  Acc: 0.8722 | Val Loss: 0.2626  Acc: 0.9045
+  Epoch  47/50 | Train Loss: 0.3467  Acc: 0.8720 | Val Loss: 0.2663  Acc: 0.9028
+  Epoch  48/50 | Train Loss: 0.3405  Acc: 0.8755 | Val Loss: 0.2768  Acc: 0.8986
+  Epoch  49/50 | Train Loss: 0.3400  Acc: 0.8759 | Val Loss: 0.2612  Acc: 0.9049
+  Epoch  50/50 | Train Loss: 0.3383  Acc: 0.8750 | Val Loss: 0.2584  Acc: 0.9070
+
+============================================================
+RESULTS SUMMARY
+============================================================
+  Accuracy:      0.9070
+  F1 (macro):    0.9065
+  Train time:    238.5s
+  Epochs run:    50
+  GPU memory:    50.1 MB
+
+  Per-class F1:
+    T-shirt/top    : 0.8555
+    Trouser        : 0.9898
+    Pullover       : 0.8606
+    Dress          : 0.9009
+    Coat           : 0.8474 *** HARD CLASS
+    Sandal         : 0.9754
+    Shirt          : 0.7299 *** HARD CLASS
+    Sneaker        : 0.9576
+    Bag            : 0.9847
+    Ankle boot     : 0.9633
+[LOG] Result appended to results/all_experiments.csv
+[LOG] Curves saved to results/curves/ablation_augmentation_crop_flip.json
+
+[DONE]
+============================================
+End time:      Tue Apr 21 01:35:03 EDT 2026
+Exit code:     0
+============================================

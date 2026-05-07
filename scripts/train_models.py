@@ -35,6 +35,7 @@ import torch.optim as optim
 import yaml
 from torch.utils.data import DataLoader, Subset
 from torchvision import datasets, transforms
+from torchvision.models import resnet18, ResNet18_Weights
 from sklearn.metrics import (
     accuracy_score,
     f1_score,
@@ -285,6 +286,28 @@ class DeeperCNN(nn.Module):
         return self.classifier(x)
 
 
+class ResNet18_1ch(nn.Module):
+    def __init__(self, num_classes=10, dropout=0.3):
+        super().__init__()
+        self.model = resnet18(weights=ResNet18_Weights.IMAGENET1K_V1)
+
+        old_conv = self.model.conv1
+        self.model.conv1 = nn.Conv2d(1, 64, 7, stride=2, padding=3, bias=False)
+
+        with torch.no_grad():
+            self.model.conv1.weight.copy_(
+                old_conv.weight.mean(dim=1, keepdim=True)
+            )
+
+        self.model.fc = nn.Sequential(
+            nn.Dropout(p=dropout),
+            nn.Linear(512, num_classes)
+        )
+
+    def forward(self, x):
+        return self.model(x)
+
+
 def build_model(config: dict) -> nn.Module:
     """Factory function: build model from config."""
     model_type: str = config["model"]["type"]
@@ -297,6 +320,8 @@ def build_model(config: dict) -> nn.Module:
     elif model_type == "deeper_cnn":
         use_res = config["model"].get("use_residual", True)
         return DeeperCNN(dropout=dropout, use_residual=use_res)
+    elif model_type == "resnet18":
+        return ResNet18_1ch(dropout=dropout)
     elif model_type == "xgboost":
         return None  # Handled separately
     else:

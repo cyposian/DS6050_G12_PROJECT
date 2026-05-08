@@ -45,7 +45,7 @@ Execute the environment setup script e.g.: Usage: ./setup_G12_proj_env.sh <your 
 Create ablations
 
 ```bash
-  python scripts/generate_ablation_configs.py
+  python scripts/generate_ablation_configs_per_model.py
 ```
 
 Run ablations

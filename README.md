@@ -27,22 +27,16 @@ architectures for image classification.
 
 ## Running on UVA Rivanna
 
-Clone the project
+Download the environment setup script into your home directory
 
 ```bash
-  git clone https://github.com/d26clarke/DS6050_G12_PROJECT.git
+  curl -L https://raw.githubusercontent.com/d26clarke/DS6050_G12_PROJECT/main/scripts/setup_G12_proj_env.sh -o setup_G12_proj_env.sh
 ```
 
-Go to the project directory
+Execute the environment setup script e.g.: Usage: ./setup_G12_proj_env.sh <your selected environment: dev | sit | prod >
 
 ```bash
-  cd DS6050_G12_PROJECT
-```
-
-Install dependencies
-
-```bash
-  bash scripts/setup_env.sh
+  ./setup_G12_proj_env.sh sit
 ```
 
 ## Usage/Examples

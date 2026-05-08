@@ -31,6 +31,7 @@ Download the environment setup script into your home directory
 
 ```bash
   curl -L https://raw.githubusercontent.com/d26clarke/DS6050_G12_PROJECT/main/scripts/setup_G12_proj_env.sh -o setup_G12_proj_env.sh
+  chmod 755 setup_G12_proj_env.sh
 ```
 
 Execute the environment setup script e.g.: Usage: ./setup_G12_proj_env.sh <your selected environment: dev | sit | prod >

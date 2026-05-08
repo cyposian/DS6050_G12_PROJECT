@@ -4,7 +4,6 @@
 #SBATCH --job-name=python_test            # Job name
 #SBATCH --output=logs/slurm_%j.out             # Standard output and error log (%j inserts the job ID)
 #SBATCH --nodes=1                         # number of nodes
-#SBATCH --ntasks-per-node=1               # number of tasks per node
 #SBATCH --ntasks=1                        # Run a single task
 #SBATCH --nodes=1                         # number of nodes
 #SBATCH --ntasks-per-node=1               # number of tasks per node
@@ -12,6 +11,7 @@
 #SBATCH --time=00:03:00                   # Time limit hrs:min:sec
 #SBATCH --gres=gpu:1                      # gpu devices per node
 #SBATCH --partition=gpu                   # partition
+#SBATCH --mem=4G                          # Memory Allocation
 ##SBATCH --partition=interactive                   # partition
 #SBATCH --mail-user=thq3hn@virginia.edu   # email address
 #SBATCH --mail-type=BEGIN

@@ -42,7 +42,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  bash slurm/setup_env.sh
+  bash scripts/setup_env.sh
 ```
 
 ## Usage/Examples
@@ -56,13 +56,13 @@ Create ablations
 Run ablations
 
 ```bash
-  chmod +x slurm/launch_ablations.sh
-  ./slurm/launch_ablations.sh
+  chmod +x scripts/launch_ablations.sh
+  ./scripts/launch_ablations.sh <your selected environment: dev | sit | prod >
 ```
 
 Run single model
 ```bash
-  sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml
+  sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml <your selected environment: dev | sit | prod >
 ```
 
 

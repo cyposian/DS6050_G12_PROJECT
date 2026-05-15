@@ -31,6 +31,37 @@
 # Get the config file
 CONFIG_FILE=$1
 
+# Get the user environment
+SELECTED_USER_ENV=$2
+
+# ---- Validate required arguments ----
+if [ -z "$CONFIG_FILE" ]; then
+    echo "ERROR: No config file specified."
+    echo "Usage: sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml <your selected environment: dev | sit | prod >"
+    exit 1
+fi
+
+if [ ! -f "$CONFIG_FILE" ]; then
+    echo "ERROR: Config file not found: $CONFIG_FILE"
+    echo "Usage: sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml <your selected environment: dev | sit | prod >"
+    exit 1
+fi
+
+if [ -z "$SELECTED_USER_ENV" ]; then
+    echo "ERROR: No selected user environment specified."
+    echo "Usage: sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml <your selected environment: dev | sit | prod >"
+    exit 1
+fi
+
+if [ ! -f "$SELECTED_USER_ENV" ]; then
+    echo "ERROR: No selected user environment specified.: $SELECTED_USER_ENV"
+    echo "Usage: sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml <your selected environment: dev | sit | prod >"
+    exit 1
+fi
+
+echo "  SELECTED CONFIG FILE: $CONFIG_FILE"
+echo "  SELECTED USER ENVIRONMENT: $SELECTED_USER_ENV"
+
 # ---- Step 1: Load Miniforge ----
 echo "[1/1] Loading Miniforge..."
 module purge
@@ -54,7 +85,7 @@ echo "CUDA version:  $(python -c 'import torch; print(torch.version.cuda)')"
 echo "============================================"
 
 # ---- Run Experiment ----
-python ~/development/DS6050_G12_PROJECT/scripts/train_models.py --config $CONFIG_FILE
+python ~/$SELECTED_USER_ENV/DS6050_G12_PROJECT/scripts/train_models.py --config $CONFIG_FILE
 
 EXIT_CODE=$?
 echo "============================================"

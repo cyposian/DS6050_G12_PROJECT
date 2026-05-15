@@ -6,8 +6,8 @@
 # Each config becomes a separate SLURM job in the GPU queue.
 #
 # Usage:
-#   chmod +x slurm/launch_ablations.sh
-#   ./slurm/launch_ablations.sh
+#   chmod +x scripts/launch_ablations.sh
+#   ./scripts/launch_ablations.sh <your selected environment: dev | sit | prod >
 #
 # What this does:
 #   - Finds every .yaml file in configs/
@@ -26,8 +26,17 @@
 
 set -e
 
+# Get environemnt from user
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <your selected environment: dev | sit | prod >"
+    exit 1
+fi
+
+# Set the user environment
+SELECTED_USER_ENV=$1
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PROJECT_DIR="$HOME/ds6050/DS6050_G12_PROJECT"
+PROJECT_DIR="$HOME/$SELECTED_USER_ENV/DS6050_G12_PROJECT"
 CONFIG_DIR="$PROJECT_DIR/configs"
 SLURM_SCRIPT="$PROJECT_DIR/slurm/run_single.slurm"
 

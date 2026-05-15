@@ -1,0 +1,21 @@
+Selected Model: /home/thq3hn/development/DS6050_G12_PROJECT/configs/baseline_mlp.yaml
+[1/1] Loading Miniforge...
+  Python: /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+  Version: Python 3.12.9
+============================================
+Job ID:        12657374
+Node:          udc-an38-25
+Partition:     gpu-a6000
+Start time:    Thu May  7 19:23:03 EDT 2026
+--------------------------------------------
+Python:        /apps/software/standard/core/miniforge/24.11.3-py3.12/bin/python
+PyTorch:       2.9.0+cu130
+CUDA avail:    True
+GPU:           NVIDIA RTX A6000
+CUDA version:  13.0
+============================================
+Traceback (most recent call last):
+  File "/home/thq3hn/development/DS6050_G12_PROJECT/test/python/slurm_test.py", line 23, in <module>
+    print(f"Job started on host: {socket.gethostname()}")
+                                  ^^^^^^
+NameError: name 'socket' is not defined. Did you forget to import 'socket'?

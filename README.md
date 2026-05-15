@@ -27,22 +27,17 @@ architectures for image classification.
 
 ## Running on UVA Rivanna
 
-Clone the project
+Download the environment setup script into your home directory
 
 ```bash
-  git clone https://github.com/d26clarke/DS6050_G12_PROJECT.git
+  curl -L https://raw.githubusercontent.com/d26clarke/DS6050_G12_PROJECT/main/scripts/setup_G12_proj_env.sh -o setup_G12_proj_env.sh
+  chmod 755 setup_G12_proj_env.sh
 ```
 
-Go to the project directory
+Execute the environment setup script e.g.: Usage: ./setup_G12_proj_env.sh <your selected environment: dev | sit | prod >
 
 ```bash
-  cd DS6050_G12_PROJECT
-```
-
-Install dependencies
-
-```bash
-  bash slurm/setup_env.sh
+  ./setup_G12_proj_env.sh sit
 ```
 
 ## Usage/Examples
@@ -50,19 +45,19 @@ Install dependencies
 Create ablations
 
 ```bash
-  python scripts/generate_ablation_configs.py
+  python scripts/generate_ablation_configs_per_model.py
 ```
 
 Run ablations
 
 ```bash
-  chmod +x slurm/launch_ablations.sh
-  ./slurm/launch_ablations.sh
+  chmod +x scripts/launch_ablations.sh
+  ./scripts/launch_ablations.sh <your selected environment: dev | sit | prod >
 ```
 
 Run single model
 ```bash
-  sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml
+  sbatch slurm/run_single.slurm configs/{YOUR_SELECTED_MODEL}.yaml <your selected environment: dev | sit | prod >
 ```
 
 
